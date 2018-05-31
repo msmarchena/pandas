@@ -2,7 +2,7 @@
 
 import numpy as np
 from pandas import (DataFrame, date_range, Timestamp, Series,
-                    to_datetime)
+                    RangeIndex, to_datetime)
 
 import pandas.util.testing as tm
 
@@ -124,4 +124,3 @@ class TestFrameAsof(TestData):
                               Timestamp('2018-01-01 22:35:10.550+00:00')])
         result = df.asof(stamp)
         tm.assert_series_equal(result, expected)
-
